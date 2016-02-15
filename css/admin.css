@@ -1,0 +1,184 @@
+
+/* ====== Edit/New Role Screen. ====== */
+
+.misc-pub-plugin-sticky .dashicons {
+	color: rgb( 130, 135, 140 );
+}
+
+.misc-pub-plugin-sticky label {
+	display: block;
+	margin: 8px 0 8px 2px;
+}
+
+/* === Edit Capabilities Tabs === */
+
+/* Wrapper box */
+
+#pdev-plugin-tabs { margin-top: 20px; margin-bottom: 0; }
+
+	#pdev-plugin-tabs > h3 {
+		padding:       10px;
+		border-bottom: 1px solid #eee;
+	}
+
+	#pdev-plugin-tabs .inside {
+		margin:  0;
+		padding: 0;
+	}
+
+/* Tabs wrapper. */
+
+.pdev-fields-manager {
+	overflow:   hidden;
+	background: #fff;
+	background: linear-gradient( 90deg, #fafafa 0%, #fafafa 20%, #fff 20%, #fff 100% );
+}
+
+	@media only screen and ( max-width: 782px ) {
+
+		.pdev-fields-manager {
+			background: linear-gradient( 90deg, #fafafa 0%, #fafafa 48px, #fff 48px, #fff 100% );
+		}
+	}
+
+	/* Tab nav. */
+
+	.pdev-fields-nav {
+		position:         relative;
+		float:            left;
+		list-style:       none;
+		width:            20%;
+		line-height:      1em;
+		margin:           0 0 -1px 0;
+		padding:          0;
+		background-color: #fafafa;
+		border-right:     1px solid #eee;
+		box-sizing:       border-box;
+	}
+
+		.pdev-fields-nav li {
+			display:     block;
+			position:    relative;
+			margin:      0;
+			padding:     0;
+			line-height: 20px;
+		}
+
+			.pdev-fields-nav li a {
+				display:         block;
+				margin:          0;
+				padding:         10px;
+				line-height:     20px !important;
+				text-decoration: none;
+				border-bottom:   1px solid #eee;
+				box-shadow:      none;
+			}
+
+				.pdev-fields-nav li a .dashicons {
+					line-height:  20px;
+					margin-right: 3px;
+				}
+
+			.pdev-fields-nav li[aria-selected="true"] a {
+				position:         relative;
+				font-weight:      bold;
+				color:            #555;
+				background-color: #e0e0e0;
+			}
+
+	@media only screen and ( max-width: 782px ) {
+
+		.pdev-fields-nav { width: 48px; }
+
+		.pdev-fields-nav li a .dashicons {
+			width:       24px;
+			height:      24px;
+			font-size:   24px;
+			line-height: 24px;
+		}
+
+			.pdev-fields-nav li .dashicons::before {
+				width:  24px;
+				height: 24px;
+			}
+
+		.pdev-fields-nav li .label {
+			overflow: hidden;
+			position: absolute;
+			top:      -1000em;
+			left:     -1000em;
+			width:    1px;
+			height:   1px;
+		}
+	}
+
+	/* Tab content wrapper */
+
+	.pdev-fields-content {
+		float:       left;
+		width:       80%;
+		margin-left: -1px;
+		border-left: 1px solid #eee;
+	}
+
+	@media only screen and ( max-width: 782px ) {
+
+		.pdev-fields-content {
+			width: calc( 100% - 48px );
+		}
+	}
+
+
+/* === Content === */
+
+.pdev-fields-section {
+		padding:     12px 12px 0;
+		box-sizing: border-box;
+}
+
+.pdev-fields-control {
+	margin-bottom: 20px;
+}
+
+	.pdev-fields-label { font-weight: bold; display: inline-block; margin-bottom: 2px; }
+
+.pdev-fields-control #excerpt {
+	height: 125px;
+	margin: 0;
+}
+
+/* === Multi-avatars Control === */
+.pdev-multi-avatars-wrap label {
+	display:    inline-block;
+	margin-top: 8px;
+}
+
+	.pdev-multi-avatars-wrap input[type="checkbox"] {
+		clip:     rect( 1px, 1px, 1px, 1px );
+		height:   1px;
+		overflow: hidden;
+		position: absolute !important;
+		width:    1px;
+	}
+
+	.pdev-multi-avatars-wrap .avatar {
+		box-sizing: border-box;
+		max-width:  100%;
+		height:     auto;
+		padding:    1px;
+		border:     4px solid transparent;
+	}
+
+		#side-sortables .pdev-multi-avatars-wrap .avatar {
+			max-width:  60px;
+			max-height: 60px;
+		}
+
+	.pdev-multi-avatars-wrap img:hover,
+	.pdev-multi-avatars-wrap img:focus {
+		border-color: #ccc;
+	}
+
+	.pdev-multi-avatars-wrap input:checked + span + img {
+		border-color: #00a0d2;
+	}
