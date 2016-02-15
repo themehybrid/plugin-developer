@@ -1,6 +1,6 @@
 # Contributing
 
-The code for the project is handled via its [GitHub Repository](https://github.com/themehybrid/theme-designer).  You can open tickets, create patches, and send pull requests there.
+The code for the project is handled via its [GitHub Repository](https://github.com/themehybrid/plugin-developer).  You can open tickets, create patches, and send pull requests there.
 
 ## Pull requests
 
