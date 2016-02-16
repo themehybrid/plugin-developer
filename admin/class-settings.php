@@ -132,7 +132,7 @@ final class PDEV_Settings_Page {
 
 		// Numbers.
 		$expire = absint( $settings['wporg_transient'] );
-		$settings['wporg_transient'] = 0 < $expire && 91 < $expire ? $expire : 3;
+		$settings['wporg_transient'] = 0 < $expire && 91 > $expire ? $expire : 3;
 
 		$plugins_per_page = intval( $settings['plugins_per_page'] );
 		$settings['plugins_per_page'] = -2 < $plugins_per_page ? $plugins_per_page : 10;
