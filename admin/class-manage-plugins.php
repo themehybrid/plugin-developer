@@ -491,7 +491,6 @@ final class PDEV_Manage_Plugins {
 		<ul>
 			<li><?php esc_html_e( 'You can hide/display columns based on your needs and decide how many plugins to list per screen using the Screen Options tab.', 'plugin-developer' ); ?></li>
 			<li><?php esc_html_e( 'You can filter the list of plugins by post status using the text links in the upper left to show All, Published, Draft, or Trashed plugins. The default view is to show all plugins.', 'plugin-developer' ); ?></li>
-			<li><?php esc_html_e( 'You can view plugins in a simple title list or with an excerpt. Choose the view you prefer by clicking on the icons at the top of the list on the right.', 'plugin-developer' ); ?></li>
 			<li><?php esc_html_e( 'You can refine the list to show only plugins with a specific category, with a specific tag, or from a specific month by using the dropdown menus above the plugins list. Click the Filter button after making your selection. You also can refine the list by clicking on the plugin author or category in the posts list.', 'plugin-developer' ); ?></li>
 		</ul>
 	<?php }
@@ -514,7 +513,8 @@ final class PDEV_Manage_Plugins {
 			<li><?php _e( '<strong>Quick Edit</strong> provides inline access to the metadata of your plugin, allowing you to update plugin details without leaving this screen.', 'plugin-developer' ); ?></li>
 			<li><?php _e( '<strong>Trash</strong> removes your plugin from this list and places it in the trash, from which you can permanently delete it.', 'plugin-developer' ); ?></li>
 			<li><?php _e( '<strong>Stick</strong> puts your plugin in the list of "sticky" plugins, which are shown first on the plugin archive page.', 'plugin-developer' ); ?></li>
-			<li><?php _e( "<strong>Preview</strong> will show you what your draft plugin will look like if you publish it. View will take you to your live site to view the plugin. Which link is available depends on your plugin's status.", 'plugin-developer' ); ?></li>
+			<li><?php _e( '<strong>Preview</strong> will show you what your draft plugin will look like if you publish it.', 'plugin-developer' ); ?></li>
+			<li><?php _e( "<strong>View</strong> will take you to your live site to view the plugin. Which link is available depends on your plugin's status.", 'plugin-developer' ); ?></li>
 		</ul>
 	<?php }
 

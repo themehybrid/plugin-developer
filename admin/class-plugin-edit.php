@@ -360,6 +360,15 @@ final class PDEV_Plugin_Edit {
 			)
 		);
 
+		// Details: Contributors help tab.
+		$screen->add_help_tab(
+			array(
+				'id'       => 'details_contributors',
+				'title'    => esc_html__( 'Details: Contributors', 'plugin-developer' ),
+				'callback' => array( $this, 'help_tab_details_contributors' )
+			)
+		);
+
 		// Set the help sidebar.
 		$screen->set_help_sidebar( pdev_get_help_sidebar_text() );
 	}
@@ -395,8 +404,7 @@ final class PDEV_Plugin_Edit {
 		<ul>
 			<li><?php _e( '<strong>Version:</strong> The current version number for the plugin.', 'plugin-developer' ); ?></li>
 			<li><?php _e( '<strong>Download URL:</strong> The URL where the plugin files can be downloaded.', 'plugin-developer' ); ?></li>
-			<li><?php _e( '<strong>Demo URL:</strong> The URL to a preview/demo of the plugin.', 'plugin-developer' ); ?></li>
-			<li><?php _e( '<strong>Parent Plugin:</strong> Drop-down select to choose a parent plugin if the current plugin is a child plugin.', 'plugin-developer' ); ?></li>
+			<li><?php _e( '<strong>Parent Plugin:</strong> Drop-down select to choose a parent plugin if the current plugin is an add-on.', 'plugin-developer' ); ?></li>
 		</ul>
 	<?php }
 
@@ -451,6 +459,20 @@ final class PDEV_Plugin_Edit {
 
 		<p>
 			<?php esc_html_e( 'The description section allows you to enter a custom description (i.e., excerpt) of the plugin.', 'plugin-developer' ); ?>
+		</p>
+	<?php }
+
+	/**
+	 * Displays the plugin details help tab.
+	 *
+	 * @since  1.0.0
+	 * @access public
+	 * @return void
+	 */
+	public function help_tab_details_contributors() { ?>
+
+		<p>
+			<?php esc_html_e( 'The contributors section allows you to select users who contributed to the plugin.', 'plugin-developer' ); ?>
 		</p>
 	<?php }
 

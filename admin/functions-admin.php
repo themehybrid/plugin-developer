@@ -237,15 +237,17 @@ function pdev_plugin_details_register( $manager ) {
 function pdev_get_help_sidebar_text() {
 
 	// Get docs and help links.
-	$docs_link = sprintf( '<li><a href="http://themehybrid.com/docs">%s</a></li>', esc_html__( 'Documentation', 'plugin-developer' ) );
+	$docs_link = sprintf( '<li><a href="https://github.com/themehybrid/plugin-developer/wiki">%s</a></li>', esc_html__( 'Documentation', 'plugin-developer' ) );
 	$help_link = sprintf( '<li><a href="http://themehybrid.com/board/topics">%s</a></li>', esc_html__( 'Support Forums', 'plugin-developer' ) );
+	$git_link  = sprintf( '<li><a href="https://github.com/themehybrid/plugin-developer">%s</a></li>', esc_html__( 'GitHub', 'plugin-developer' ) );
 
 	// Return the text.
 	return sprintf(
-		'<p><strong>%s</strong></p><ul>%s%s</ul>',
+		'<p><strong>%s</strong></p><ul>%s%s%s</ul>',
 		esc_html__( 'For more information:', 'plugin-developer' ),
 		$docs_link,
-		$help_link
+		$help_link,
+		$git_link
 	);
 }
 
