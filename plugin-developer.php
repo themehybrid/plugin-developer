@@ -3,7 +3,7 @@
  * Plugin Name: Plugin Developer
  * Plugin URI:  http://themehybrid.com/plugins/plugin-developer
  * Description: A plugin for plugin authors to manage their plugin portfolios.
- * Version:     1.0.0-dev
+ * Version:     1.0.0
  * Author:      Justin Tadlock
  * Author URI:  http://themehybrid.com
  * Text Domain: plugin-developer
