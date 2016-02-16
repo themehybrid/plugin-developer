@@ -413,6 +413,15 @@ function pdev_get_plugin_contributor_objects( $plugin_id = 0 ) {
 	return apply_filters( 'pdev_get_plugin_contributor_objects', $users, $plugin_id );
 }
 
+/**
+ * Used as a filter to add the plugin author to contributor list.
+ *
+ * @since  1.0.0
+ * @access public
+ * @param  array  $user_ids
+ * @param  int    $plugin_id
+ * @return array
+ */
 function pdev_plugin_contributor_ids_plus_author( $user_ids, $plugin_id ) {
 
 	$author_id = pdev_get_plugin_author_id( $plugin_id );
@@ -466,7 +475,12 @@ function pdev_list_plugin_contributors( $args = array() ) {
 		$html = sprintf( '<ul class="pdev-list-plugin-contributors">%s</ul>', $html );
 	}
 
-	echo apply_filters( 'pdev_list_plugin_contributors', $html, $args['plugin_id'], $args );
+	$html = apply_filters( 'pdev_list_plugin_contributors', $html, $args['plugin_id'], $args );
+
+	if ( ! $args['echo'] )
+		return $html;
+
+	echo $html;
 }
 
 /* ====== Images ====== */
