@@ -73,13 +73,13 @@ final class PDEV_Plugin_Edit {
 		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue' ) );
 
 		// Output the plugin details box.
-		add_action( 'edit_form_after_editor', array( $this, 'plugin_details_box' ) );
+		//add_action( 'edit_form_after_editor', array( $this, 'plugin_details_box' ) );
 
 		// Add/Remove meta boxes.
 		add_action( 'add_meta_boxes', array( $this, 'add_meta_boxes' ) );
 
 		// Add custom option to the publish/submit meta box.
-		add_action( 'post_submitbox_misc_actions', array( $this, 'submitbox_misc_actions' ) );
+		//add_action( 'post_submitbox_misc_actions', array( $this, 'submitbox_misc_actions' ) );
 
 		// Save metadata on post save.
 		add_action( 'save_post', array( $this, 'update' ) );
@@ -112,6 +112,10 @@ final class PDEV_Plugin_Edit {
 	public function add_meta_boxes( $post_type ) {
 
 		remove_meta_box( 'postexcerpt', $post_type, 'normal' );
+
+
+		add_meta_box( 'pdev_details', esc_html__( 'Details', 'plugin-developer' ), array( $this, 'plugin_details_box' ), $post_type, 'normal', 'low' );
+		add_meta_box( 'pdev_stick', esc_html__( 'Sticky', 'plugin-developer' ), array( $this, 'submitbox_misc_actions' ), $post_type, 'side', 'low' );
 
 		add_meta_box( 'pdev_icon', esc_html__( 'Icon', 'plugin-developer' ), array( $this, 'icon_meta_box' ), $post_type, 'side', 'low' );
 	}

@@ -140,6 +140,7 @@ function pdev_register_post_types() {
 		'map_meta_cap'        => true,
 		'capabilities'        => pdev_get_plugin_capabilities(),
 		'labels'              => pdev_get_plugin_labels(),
+		'show_in_rest'        => true,
 
 		// The rewrite handles the URL structure.
 		'rewrite' => array(
